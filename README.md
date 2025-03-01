@@ -6,11 +6,11 @@
 
 ## **🔷 Project Highlights 🔷**
 
-🏀 This project builds a containerized API management system for querying real-time sports data.
+📦  This project builds a containerized API management system for querying real-time sports data.
 
-🏀 It leverages **Amazon ECS (Fargate)**, **Amazon API Gateway**, **Docker**, and an external **Sports API** to manage and query sports data securely and efficiently.
+📦  It leverages **Amazon ECS (Fargate)**, **Amazon API Gateway**, **Docker**, and an external **Sports API** to manage and query sports data securely and efficiently.
 
-🏀 Demonstrates how to use **AWS Cloud** to deploy a containerized backend and expose a REST API for seamless user interaction with real-time data.
+📦  Demonstrates how to use **AWS Cloud** to deploy a containerized backend and expose a REST API for seamless user interaction with real-time data.
 
 ---
 
