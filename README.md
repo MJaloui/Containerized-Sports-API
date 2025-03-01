@@ -1,9 +1,8 @@
 # Containerized Sports API Management System
 
-# Sports API Management System
-![image](https://github.com/user-attachments/assets/32e49fe6-df16-40cb-b262-af1478cf01d5)
+![image](https://github.com/user-attachments/assets/bfb10401-6356-41ab-9203-bfdcbee4efa2)
 
----
+
 
 ## **🔷 Project Highlights 🔷**
 
