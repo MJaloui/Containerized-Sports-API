@@ -59,7 +59,7 @@
 
 ### **Steps:** ➡️❗ [Click Here To View Detailed Visual Steps](https://github.com/MJaloui/Containerized-Sports-API/blob/main/VisualStepsHere.md) ❗⬅️
    
-### **Set Up ECS Cluster with Fargate**
+**Set Up ECS Cluster with Fargate**
 
 1. Clone the Repository.
 
@@ -78,7 +78,7 @@
 8. Test the ALB.
 
 
-### **Configure API Gateway**
+**Configure API Gateway**
 
 1. Create a New REST API.
 
@@ -88,4 +88,29 @@
 
 4. Use curl or a browser to test the system.
 
+
+---
+
+✔️ Keynotes ✔️
+
+🔹 Deploying a containerized backend using Amazon ECS (Fargate) for scalability.
+
+🔹 Managing and routing API requests securely with Amazon API Gateway.
+
+🔹 Utilizing Docker to simplify containerized deployments.
+
+🔹 Implementing IAM least privilege policies for ECS task execution and API Gateway security.
+
+🔹 Querying real-time sports data through an external Sports API.
+
+
+🌱 Opportunities for Growth 🌱
+
+🔹 Implement API rate limiting to prevent abuse and optimize performance.
+
+🔹 Add Amazon ElastiCache for caching frequent API requests and reducing response time.
+
+🔹 Integrate DynamoDB to store user-specific queries and preferences for personalized experiences.
+
+🔹 Secure API Gateway with API keys or IAM-based authentication for controlled access.
 
