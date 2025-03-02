@@ -387,10 +387,19 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 ![image](https://github.com/user-attachments/assets/54e3fb76-1fca-4770-b085-d6fcc18f70c0)
 
+![image](https://github.com/user-attachments/assets/8e14d976-24cc-4c7c-859d-a288777b60bd)
 
-- Confirm the API is accessible by visiting the ALB DNS name in your browser and adding /sports at end (e.g, http://sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports)
 
 
+- Confirm the API is accessible by visiting the ALB DNS name in your browser and adding /sports at end (e.g, http://sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports). Select "Pretty print" to display readable text 
+
+![image](https://github.com/user-attachments/assets/53b03d4c-960a-4fbc-ba13-547d37b49ade)
+
+![image](https://github.com/user-attachments/assets/df5fa185-b6f4-4ff7-b174-23acbf1afb4d)
+
+![image](https://github.com/user-attachments/assets/8a5bce7a-04fb-4acd-93f7-96ce99e5b6a1)
+
+![image](https://github.com/user-attachments/assets/97002b48-298c-45b7-9a46-bdd82c4621d8)
 
 
 ### **Configure API Gateway**
