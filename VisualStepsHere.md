@@ -372,11 +372,26 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 ![image](https://github.com/user-attachments/assets/960596d3-02a0-419c-abf8-cde780fadd85)
 
+- Verify successful creation, a green banner will be displayed. This may take a few minutes to appear.
+
+  ![image](https://github.com/user-attachments/assets/4df7ffd8-b177-4c65-b8cc-90caf00e9ef1)
+
+![image](https://github.com/user-attachments/assets/78fcf537-5a75-47ce-ba87-53ebf21f6f5b)
 
 
 ### **4. Test the ALB:**
+
 - After deploying the ECS service, note the DNS name of the ALB (e.g., sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com)
+
+![image](https://github.com/user-attachments/assets/0bb289ee-8afd-4c57-a277-960c9d6d3bba)
+
+![image](https://github.com/user-attachments/assets/54e3fb76-1fca-4770-b085-d6fcc18f70c0)
+
+
 - Confirm the API is accessible by visiting the ALB DNS name in your browser and adding /sports at end (e.g, http://sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports)
+
+
+
 
 ### **Configure API Gateway**
 1. Create a New REST API:
