@@ -15,29 +15,29 @@
 
 ### **Prerequisites**
 
-### **Sign up for a free account and subcription with Serpapi to get an API key.**
+### **1. Sign up for a free account and subcription with Serpapi to get an API key.**
 
-### 1. Go to [Serpapi](https://serpapi.com/)  website and register, confirm registartion.
+  - **Go to [Serpapi](https://serpapi.com/)  website and register, confirm registartion.**
 
 ![image](https://github.com/user-attachments/assets/993a785e-d035-427e-9f29-4c3e3862ad02)
 
 ![image](https://github.com/user-attachments/assets/bf5b68a2-b0f3-4f04-9ec7-63e21b9e8515)
 
-  - Confirm registration in email and verify phone number.
+  - **Confirm registration in email and verify phone number.**
 
 ![image](https://github.com/user-attachments/assets/adfc7c58-2259-4e6a-97ff-20410c78704e)
 
-  - Click "Verify phone number" and enter your phone number.
+  - **Click "Verify phone number" and enter your phone number.**
 
 ![image](https://github.com/user-attachments/assets/dc4b3d83-e47d-4e55-bbbd-0c35eca88a8e)
 
-  - Enter verification number sent to your phone. You will be notified a successfull confirmation.
+  - **Enter verification number sent to your phone. You will be notified a successfull confirmation.**
 
 ![image](https://github.com/user-attachments/assets/81abe92e-890b-4156-8535-e5d3cbe547dd)
 
 ![image](https://github.com/user-attachments/assets/d8de2e89-79ed-4db7-b924-d03990fa26b0)
 
-**Create an AWS Account & have basic understanding of ECS, API Gateway, Docker & Python.**
+**2. Must have an AWS Account & have basic understanding of ECS, API Gateway, Docker & Python.**
 
   - **Verfiy if you have AWS CLI installed using the "version" command**
 
@@ -63,7 +63,7 @@ aws configure
 ![image](https://github.com/user-attachments/assets/974a2958-7609-4e61-84e7-ecf249a8b55d)
 
 
-**Install Serpapi library in local environment.**
+**3. Install Serpapi library in local environment.**
 
 ```bash
 pip install google-search-results
@@ -72,10 +72,25 @@ pip install google-search-results
 ![image](https://github.com/user-attachments/assets/c4a8f41c-1758-4765-b2b1-aa90aead0634)
 
 
-**Docker CLI and Desktop Installed: To build & push container images.**
+**4. Docker CLI and Desktop Installed: To build & push container images.**
 
+&nbsp;
 
-### **Clone the Repository**
+&nbsp;
+
+---
+
+&nbsp;
+
+&nbsp;
+
+### **Steps:*
+
+&nbsp;
+
+&nbsp;
+
+### **1. Clone this Repository**
 ```bash
 git clone https://github.com/MJaloui/Containerized-Sports-API.git
 cd containerized-sports-api
@@ -83,16 +98,24 @@ cd containerized-sports-api
 
 
 
-### **Create ECR Repo**
+### **2. Create ECR Repository**
+
 ```bash
 aws ecr create-repository --repository-name sports-api --region us-east-1
 ```
 
 ![image](https://github.com/user-attachments/assets/3f995caa-531c-4b2b-a6f5-42c26af25a03)
 
+    - Verify it was created in "Amazon ECR > Private registry > Repositories".
+    
+![image](https://github.com/user-attachments/assets/53fa314c-ec2d-4fe9-b06b-66860fa8c918)
+
+![image](https://github.com/user-attachments/assets/7a0c421c-8f82-4553-86ef-abbaf3fb7aa1)
 
 
-### **Authenticate Build and Push the Docker Image**
+
+
+### **Authenticate Build, and Push the Docker Image**
 
 ```bash
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com
