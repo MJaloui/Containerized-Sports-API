@@ -173,7 +173,7 @@ aws ecr create-repository --repository-name sports-api --region us-east-1
 
 ![image](https://github.com/user-attachments/assets/3f995caa-531c-4b2b-a6f5-42c26af25a03)
 
-    - Verify it was created in "Amazon ECR > Private registry > Repositories".
+    - Verify the repository was created in "Amazon ECR > Private registry > Repositories".
     
 ![image](https://github.com/user-attachments/assets/53fa314c-ec2d-4fe9-b06b-66860fa8c918)
 
@@ -182,7 +182,7 @@ aws ecr create-repository --repository-name sports-api --region us-east-1
 
 
 
-### **Authenticate Build, and Push the Docker Image**
+### **3. Authenticate Build, and Push the Docker Image**
 
 ```bash
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com
@@ -211,15 +211,50 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 ![image](https://github.com/user-attachments/assets/c71d48b3-e449-4e3a-a966-22a61ff2b011)
 
+  - **Verify the image was created, go to Elastic Container Registry > Images > Sports-API.**
 
-### **Set Up ECS Cluster with Fargate**
+![image](https://github.com/user-attachments/assets/2e137f55-a784-4b4c-a73b-2683888d6250)
+
+![image](https://github.com/user-attachments/assets/639ace6f-25c0-4a97-9ded-e059a5ccbe4d)
+
+
+
+### **4. Set Up ECS Cluster with Fargate**
+
 1. Create an ECS Cluster:
+   
 - Go to the ECS Console → Clusters → Create Cluster
+
+![image](https://github.com/user-attachments/assets/5150bc63-2ebf-4ec3-8e74-39ceaad135b8)
+
+![image](https://github.com/user-attachments/assets/f63673c6-ab07-41a2-a663-7a3d15729ef3)
+
+![image](https://github.com/user-attachments/assets/e7afb0f9-e747-45f9-88fc-fcf2352cb740)
+
 - Name your Cluster (sports-api-cluster)
-- For Infrastructure, select Fargate, then create Cluster
+
+![image](https://github.com/user-attachments/assets/1f60bfd6-77f5-4e11-a2d0-2c7d2b9bd295)
+
+
+  
+- For Infrastructure, select Fargate, then create Cluster. It it was succesfull, a green successfull banner will be displayed.
+
+![image](https://github.com/user-attachments/assets/82de2cb4-481f-4ac8-8c48-5c06bd50ef4c)
+
+![image](https://github.com/user-attachments/assets/a566f0a4-3926-4aa1-956f-714b72a33341)
+
+![image](https://github.com/user-attachments/assets/33ef31e7-03a8-4a55-9e3b-1b711b41f20f)
+
 
 2. Create a Task Definition:
-- Go to Task Definitions → Create New Task Definition
+
+- Go to Task Definitions → Create New Task Definition.
+
+![image](https://github.com/user-attachments/assets/c4e04d81-d0fc-4500-8568-44d6d636908d)
+
+![image](https://github.com/user-attachments/assets/efa613d4-d2b7-476f-b8d2-3774d24c1fa3)
+
+
 - Name your task definition (sports-api-task)
 - For Infrastructure, select Fargate
 - Add the container:
