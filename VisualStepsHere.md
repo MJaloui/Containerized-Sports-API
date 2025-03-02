@@ -11,8 +11,6 @@
 
 
 
-## **Setup Instructions**
-
 ### **Prerequisites**
 
 ### **1. Sign up for a free account and subcription with Serpapi to get an API key.**
@@ -151,7 +149,7 @@ systemctl start docker
 
 &nbsp;
 
-### **Steps:*
+### **Steps:**
 
 &nbsp;
 
@@ -246,7 +244,7 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 ![image](https://github.com/user-attachments/assets/33ef31e7-03a8-4a55-9e3b-1b711b41f20f)
 
 
-2. Create a Task Definition:
+### **2. Create a Task Definition:**
 
 - Go to Task Definitions → Create New Task Definition.
 
@@ -256,35 +254,127 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 
 - Name your task definition (sports-api-task)
-- For Infrastructure, select Fargate
+
+![image](https://github.com/user-attachments/assets/d830aa08-f78f-4f97-8284-5dfaf7a11744)
+
+  
+- For Infrastructure, select "Fargate", leave everything else at default and click "Create".
+
+![image](https://github.com/user-attachments/assets/65a1c5d7-8577-47bc-b9d3-ca9414ca6ecd)
+
+![image](https://github.com/user-attachments/assets/2c45b152-e502-4e08-b9cf-ba9c134308be)
+
 - Add the container:
+  
   - Name your container (sports-api-container)
+
+![image](https://github.com/user-attachments/assets/b9059bd0-68b3-4307-8971-4a094bb88b23)
+
   - Image URI: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-api-latest
+
+![image](https://github.com/user-attachments/assets/af4ff32a-133f-4010-a8ba-3dc3cb46e71a)
+
+![image](https://github.com/user-attachments/assets/c9dbb096-b6b9-4fdd-8ee5-e48b3d928135)
+
   - Container Port: 8080
   - Protocol: TCP
   - Port Name: Leave Blank
   - App Protocol: HTTP
-- Define Environment Eariables:
-  - Key: SPORTS_API_KEY
+
+  ![image](https://github.com/user-attachments/assets/39343af3-d4d9-4b1c-b6b6-76262ef881e4)
+  
+- Add Environment Variables:
+
+ ![image](https://github.com/user-attachments/assets/b477f2f2-34c3-4142-9471-fa3d26b5a8fb)
+
+  - Key name: SPORTS_API_KEY
   - Value: <YOUR_SPORTSDATA.IO_API_KEY>
   - Create task definition
-3. Run the Service with an ALB
+  - Verify creation is successful, look for green banner display.
+    
+ ![image](https://github.com/user-attachments/assets/659ccec9-1b85-413f-be1c-9d2dbd0036be)
+
+![image](https://github.com/user-attachments/assets/2dcca0bf-0eb1-45d9-8061-ec1317996f16)
+
+![image](https://github.com/user-attachments/assets/5b1488de-3593-4023-a19b-003b561bc996)
+
+![image](https://github.com/user-attachments/assets/23fe970d-1ff7-4f5b-ad1d-750bb4dd5152)
+
+  - If you scroll down to "Container name" you can see the image.
+
+![image](https://github.com/user-attachments/assets/a414d42e-5a32-4ffd-b1e5-d2aaa1ed969c)
+
+
+ 
+### **3. Run the Service with an ALB**
+
 - Go to Clusters → Select Cluster → Service → Create.
+
+![image](https://github.com/user-attachments/assets/fcdbdf4e-1a1b-495b-a168-10dbd8b08ca7)
+
+![image](https://github.com/user-attachments/assets/1967e3c2-f586-4438-9663-7f78639fd026)
+
+![image](https://github.com/user-attachments/assets/f15a9729-a7bf-44f2-8afa-e9157c119df8)
+
+
 - Capacity provider: Fargate
+
+![image](https://github.com/user-attachments/assets/e8447d86-119c-4178-ad7d-07cefeced426)
+
 - Select Deployment configuration family (sports-api-task)
+
+![image](https://github.com/user-attachments/assets/e4e82f46-12ee-4cfa-8b60-b66c7e07f335)
+
+
 - Name your service (sports-api-service)
+
+![image](https://github.com/user-attachments/assets/526ad40a-8358-40e2-82e5-e422cd39f0c6)
+
+
 - Desired tasks: 2
+
+![image](https://github.com/user-attachments/assets/6ab7c7f3-e8b0-49b6-a378-f1424d33d860)
+
+![image](https://github.com/user-attachments/assets/3b085ef9-c285-4788-8e83-c0dc25dd19b7)
+
+
 - Networking: Create new security group
+
+![image](https://github.com/user-attachments/assets/3b6f86bd-205e-414a-a4ff-dcc5761bf192)
+
+![image](https://github.com/user-attachments/assets/5a02cb32-b7d5-4fa4-8548-b2773a1e4cc6)
+
+
+
 - Networking Configuration:
   - Type: All TCP
   - Source: Anywhere
-- Load Balancing: Select Application Load Balancer (ALB).
+    
+ ![image](https://github.com/user-attachments/assets/5667014c-3f26-4232-b6f5-beb58c7eb019)
+
+
+- Load Balancing: Select "Use load Balancing" and "Application load Balancer (ALB)"
+
+![image](https://github.com/user-attachments/assets/b61726b7-dc41-4675-9912-c0baf3d7bd52)
+
+
 - ALB Configuration:
+ 
  - Create a new ALB:
  - Name: sports-api-alb
+
+![image](https://github.com/user-attachments/assets/827b49b4-60b8-470c-8668-e1e4dd74502b)
+
  - Target Group health check path: "/sports"
  - Create service
-4. Test the ALB:
+
+![image](https://github.com/user-attachments/assets/e6fc506b-3345-4947-b22f-fffb6ed434a7)
+
+![image](https://github.com/user-attachments/assets/960596d3-02a0-419c-abf8-cde780fadd85)
+
+
+
+### **4. Test the ALB:**
 - After deploying the ECS service, note the DNS name of the ALB (e.g., sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com)
 - Confirm the API is accessible by visiting the ALB DNS name in your browser and adding /sports at end (e.g, http://sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports)
 
