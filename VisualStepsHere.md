@@ -135,7 +135,7 @@ systemctl start docker
 
     ```bash
     sudo docker run hello-world
-    ``
+    ```
 
 ![image](https://github.com/user-attachments/assets/90828797-069c-47c1-85ee-3dc298e9f402)
 
