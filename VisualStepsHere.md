@@ -74,6 +74,73 @@ pip install google-search-results
 
 **4. Docker CLI and Desktop Installed: To build & push container images.**
 
+
+  - Verify Docker is installed. If docker is not installed, no output will be returned.
+
+```bash
+docker --version
+``
+
+  - If not output was returnted, Docker is not installed. Enter these commands below to install.
+
+  - First, update system to ensure everything is up to date. 
+
+```bash
+sudo apt-get update
+```
+
+![image](https://github.com/user-attachments/assets/e1746c65-39b4-4cb1-a1f1-ce820c2f5218)
+
+
+  - **Install Docker.**
+
+```bash
+sudo apt install docker.io
+```
+
+![image](https://github.com/user-attachments/assets/bc4c64c1-ba16-4064-b115-05d80ca1bf04)
+
+
+
+  - **Enable Docker.**
+
+```bash
+sudo systemctl enable docker
+```
+
+![image](https://github.com/user-attachments/assets/aacb8840-10cf-463c-aa7b-05e2af68e730)
+
+
+
+  - **Verify Docker is enabled.**
+
+```bash
+systemctl status docker
+```
+
+![image](https://github.com/user-attachments/assets/00d29a33-354b-4321-8383-884bfe2fb92f)
+
+
+  - **Start Docker, enter password.**
+
+```bash
+systemctl start docker
+```
+
+![image](https://github.com/user-attachments/assets/fef786df-5efc-4dd6-9ee0-68b7940a2511)
+
+
+
+  - **Run Docker to verify everthing is working correctly. A message will display it's working coreclty if it's functioning correctly.**
+
+    ```bash
+    sudo docker run hello-world
+    ``
+
+![image](https://github.com/user-attachments/assets/90828797-069c-47c1-85ee-3dc298e9f402)
+
+
+
 &nbsp;
 
 &nbsp;
