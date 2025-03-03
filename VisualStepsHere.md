@@ -435,20 +435,45 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 - Click "Create resource".
 
-![image](https://github.com/user-attachments/assets/0e43a9c1-57c0-497b-a014-91a0721c1018)
+- Verify successful creation, a green banner will be displayed along with the resource "/sports".
 
-![image](https://github.com/user-attachments/assets/a47824ae-beda-4493-805c-a250fddeccb8)
+![image](https://github.com/user-attachments/assets/e59f8026-f60f-4379-a9ce-d9c24c585c4a)
+
+![image](https://github.com/user-attachments/assets/ce091c52-ff8b-4181-9327-aa513ed0e82d)
 
 
 
 
   
 - Create a GET method
-- Choose HTTP Proxy as the integration type
-- Enter the DNS name of the ALB that includes "/sports" (e.g. http://sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports
+
+![image](https://github.com/user-attachments/assets/6c223acf-c7ab-4e59-a26e-8e61dde5e16d)
+
+  
+- Choose HTTP Proxy as the integration type, Method type = Get, Integration type = HTTP, HTTP proxy integration should be on.
+
+![image](https://github.com/user-attachments/assets/4f932598-bb35-4be4-bfd6-76fd43b7d645)
+
+
+- Select "GET" for HTTP method.
+
+- Enter the DNS name of the ALB that includes "/sports" (e.g. http://sports-api-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports).
+
+- Create Method.
+
+- Verify successful banner
+
+  
+![image](https://github.com/user-attachments/assets/00c80159-be40-49ac-8a84-2f1706692341)
+
+![image](https://github.com/user-attachments/assets/deb8f556-38c0-4e7c-9fad-207ee22748f3)
+
+
 
 3. Deploy the API:
+
 - Deploy the API to a stage (e.g., prod)
+
 - Note the endpoint URL
 
 ### **Test the System**
