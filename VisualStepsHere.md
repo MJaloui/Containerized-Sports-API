@@ -468,16 +468,46 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 ![image](https://github.com/user-attachments/assets/deb8f556-38c0-4e7c-9fad-207ee22748f3)
 
+![image](https://github.com/user-attachments/assets/5f4a8d7b-379d-4ac1-84ee-1eadfc1c2209)
+
 
 
 3. Deploy the API:
 
-- Deploy the API to a stage (e.g., prod)
+- Deploy the API, Select "*New stage*" for Stage and enter "Dev" for stage name.
+- Verify Successful creation, a green banner will be displayed.
 
-- Note the endpoint URL
+
+![image](https://github.com/user-attachments/assets/9ac62f5b-4f75-47a3-8f19-b92031c5e71c)
+
+![image](https://github.com/user-attachments/assets/8e287fc3-7e5a-4f16-85f8-f7fe9d963028)
+
+![image](https://github.com/user-attachments/assets/56f72671-e5e6-4a23-b603-d1f562497fee)
+
+![image](https://github.com/user-attachments/assets/be83765c-1942-4a8e-8624-54bbbac75aa5)
+
+- Copy the endpoint URL.
+
+![image](https://github.com/user-attachments/assets/aafa7876-fa8e-4b67-b693-0d89a379076e)
+
 
 ### **Test the System**
-- Use curl or a browser to test:
+- Use curl or a browser to test(I tested on the browser):
+
+ - Enter the command below if you'd like to test it in the command line instead.
+
 ```bash
 curl https://<api-gateway-id>.execute-api.us-east-1.amazonaws.com/prod/sports
 ```
+
+![image](https://github.com/user-attachments/assets/93b6816d-ac7a-4179-bfa9-df960a01bd72)
+
+  - Select "Petty-print" to view data in a readable text.
+
+![image](https://github.com/user-attachments/assets/c34e403c-96d7-4823-99e3-122189d6dc72)
+
+![image](https://github.com/user-attachments/assets/d039ed5f-9efd-464e-a74c-be1b286460cb)
+
+
+
+
