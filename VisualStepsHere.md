@@ -403,12 +403,44 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 
 ### **Configure API Gateway**
-1. Create a New REST API:
-- Go to API Gateway Console → Create API → REST API
-- Name the API (e.g., Sports API Gateway)
 
-2. Set Up Integration:
-- Create a resource /sports
+1. Create a New REST API:
+
+- Go to API Gateway Console and scroll down → Build API 
+
+![image](https://github.com/user-attachments/assets/4a78ed95-c37c-4666-8461-3e54d3116c58)
+
+![image](https://github.com/user-attachments/assets/ea195d51-928e-4486-8a94-d01e153b3b65)
+
+- Name the API (e.g., Sports API Gateway), then click create.
+
+![image](https://github.com/user-attachments/assets/4062d5ba-2e5d-4554-871f-8fb480c28fbc)
+
+![image](https://github.com/user-attachments/assets/651492a0-429e-44fd-bd1a-810a27360a2f)
+
+- Verify successful creation, a green banner will be displayed.
+
+![image](https://github.com/user-attachments/assets/09a20eb9-4efb-4d44-a478-e2abfdee8102)
+
+
+
+2. Set Up Integration (create a resource):
+
+- Click "Create resource"
+
+  ![image](https://github.com/user-attachments/assets/d9c469c3-8556-4487-afad-a789e119390b)
+
+
+- Create the resource "/sports", (Resource path = /) (Resource name = sports).
+- Click "Create resource".
+
+![image](https://github.com/user-attachments/assets/0e43a9c1-57c0-497b-a014-91a0721c1018)
+
+![image](https://github.com/user-attachments/assets/5bbe53bb-ce1e-4015-be01-f849e20880ba)
+
+
+
+  
 - Create a GET method
 - Choose HTTP Proxy as the integration type
 - Enter the DNS name of the ALB that includes "/sports" (e.g. http://sports-api-alb-<AWS_ACCOUNT_ID>.us-east-1.elb.amazonaws.com/sports
