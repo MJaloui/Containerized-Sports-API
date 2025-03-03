@@ -432,11 +432,13 @@ docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sports-api:sports-a
 
 
 - Create the resource "/sports", (Resource path = /) (Resource name = sports).
+
 - Click "Create resource".
 
 ![image](https://github.com/user-attachments/assets/0e43a9c1-57c0-497b-a014-91a0721c1018)
 
-![image](https://github.com/user-attachments/assets/5bbe53bb-ce1e-4015-be01-f849e20880ba)
+![image](https://github.com/user-attachments/assets/a47824ae-beda-4493-805c-a250fddeccb8)
+
 
 
 
